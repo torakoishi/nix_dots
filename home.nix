@@ -34,6 +34,8 @@
     _1password
     _1password-gui
     obsidian
+    tor
+    mullvad-vpn
   ];
 
   # Nicely reload system units when changing configs
