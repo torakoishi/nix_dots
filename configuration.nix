@@ -105,6 +105,7 @@
     kdePackages.kdeconnect-kde
     kdePackages.kdenlive
     kdePackages.kio-admin
+    kdePackages.qtstyleplugin-kvantum
     kdePackages.sddm-kcm
     konsave
     nixd
