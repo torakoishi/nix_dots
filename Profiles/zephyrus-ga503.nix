@@ -4,6 +4,7 @@
 
 {
   boot = {
+    kernelPackages = pkgs.linuxPackages_zen;
 	  initrd.kernelModules = [ "amdgpu" ];
 	  kernelParams = [
 		  "rd.driver.blacklist=nouveau"
@@ -12,7 +13,7 @@
 		  "iommu=on"
 		  "amd_iommu=on"
 		  "amd_pstate=guided"
-		  "nowatchdog"
+		  #"nowatchdog"
 		  "modprobe.blacklist=sp5100_tco"
 		];
   };
@@ -26,7 +27,7 @@
   zramSwap = {
 	  enable = true;
 	  priority = 100;
-	  memoryPercent = 30;
+	  memoryPercent = 50;
 	  swapDevices = 1;
   };
 
@@ -90,7 +91,7 @@
       nvidiaSettings = true;
 
       # Nvidia driver.
-      package = config.boot.kernelPackages.nvidiaPackages.stable;
+      package = config.boot.kernelPackages.nvidiaPackages.production;
   	};
   };
 }

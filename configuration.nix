@@ -82,7 +82,7 @@
   # Enable kde-connect and opens TCP and UDP ports 1714-1764.
   programs.kdeconnect.enable = true;
 
-    # Allow unfree package repository.
+  # Allow unfree package repository.
   nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile. To search, run:
@@ -91,6 +91,7 @@
     brave
     btop
     btrfs-progs
+    chntpw
     cpufrequtils
     discord
     emote
@@ -109,6 +110,9 @@
     kdePackages.sddm-kcm
     konsave
     nixd
+    ntfs3g
+    tree
+    usbutils
     unzip
     vscode
     wget
@@ -169,6 +173,9 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
+
+  system.autoUpgrade.enable  = true;
+  system.autoUpgrade.allowReboot  = true;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
